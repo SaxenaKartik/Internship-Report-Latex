@@ -1,0 +1,34 @@
+% \begin{titlepage}
+% {\LARGE \bf Chapter 1} \\[0.3in]
+% {\Large \bf Objective} \\[0.3in]
+% The Mechanical Chef website is built primarily to automate the procedure of controlling the mechanical chef robot to cook a dish and monitor the real time cooking procedure through live video feed.\\[0.1in]
+% This project aims to build a back-end server, database design and basic user interface for the new Mechanical Chef website to control and monitor the mechanical chef. The website provides a functionality to register a new user, place orders on the mechanical chef, register a new robot, view the real time updates on each step of the recipe and get live video stream on the recipe being cooked. \\[0.1in]
+% This website encapsulates the overall user experience and automates the whole procedure from loading vegetables and spices in the dispensers to finishing a complete dish 
+% \end{titlepage}
+
+\chapter{Objectives}
+
+\section{ Website and User Interface}
+{\normalsize The Mechanical Chef website is built primarily to automate the procedure of controlling the mechanical chef robot to cook a dish and monitor the real time cooking procedure through live video feed.\\[0.1in]
+One of the foremost aim of this project is to build one such user interface for a quick and easy interaction between the user and the machine. There should be a functionality to register a user, maintain their profile, keeping a track of the dishes they have cooked as well as the robots they own. \\[0.1in]
+The user should also be able to customize the recipes and record new recipes to be stored in the database.
+}
+\section{ Reliable Back-End Server }
+{\normalsize A robust back-end was needed for the website to handle the API requests as well as polling by the simulator. The back-end had to be secure and restricting unauthorized access to confidential data of the users as well as the robots. \\[0.1in]
+The database design for the project had to be developed from scratch and preferably in any SQL supporting RDBMS for the comprehensibility of the developer, flexibility in design and scalability for any future work. \\[0.1in]
+The framework for building the back-end was aimed to support rapid development as a multifold of modules had to be built and developed from square one. The back-end had to be versatile for building a secure user authentication system.
+}
+
+\section{ RESTful Application Program Interface (APIs) }
+{ \normalsize To support the back-end design and encompass the overall user experience miscellaneous APIs had to be developed for user authentication, placing orders, fetching recipes being cooked etc. \\[0.1in]
+Some APIs were needed by the simulator to perform the operations replicating the robots actions while cooking any dish. All these APIs were integrated with the framework used to develop the back-end server.
+}
+\section{ Poller }
+{ \normalsize To establish communication between the simulator and the server, polling was required. A separate module (poller) was made to perform the same and was integrated with the simulator. \\[0.1in]
+Polling can be done without the knowledge of IP address of the client and is thus more flexible than using sockets between a client and a server.\\[0.1in]
+}
+\section{ Simulator }
+{
+Since the basic server could not be tested on the actual machine initially a simulator was built to test and debug the website and back-end server. The simulator module was meant to be run on each robot acting as an interface between the server and the robot itself. \\[0.1in]
+Simulator for each machine had to be run on separate threads so that they don't interfere with each other while fetching commands from the server and each simulator had sub-threads for each vessel. 
+}
